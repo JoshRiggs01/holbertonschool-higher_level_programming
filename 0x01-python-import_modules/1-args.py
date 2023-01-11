@@ -6,8 +6,8 @@ if __name__ == "__main__":
     n = len(argv)
 
     if n == 0:
-        print("{} arguments:".format(n))
+        print("{} {}:".format(n + 1, argv[n]))
     else:
-        print("{} arguments:".format(n))
+        print("{} arguments:".format(n + 1, argv[n]))
         for i in range(n):
             print("{}: {}".format(i + 1, argv[i]))
