@@ -7,6 +7,7 @@ property setter def size(self, value): to set it:
 if size is equal to 0, print an empty line
 """
 
+
 class Square:
     def __init__(self, size=0):
         """
