@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Square Class"""
+
+
 class Square:
-    """
-    Define a square by:
+    """Define a square by:
     - private instance attribute: size
     - Instantiation with optional size
     """
