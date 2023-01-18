@@ -2,8 +2,6 @@
 """
 Defines a square by its size.
 """
-
-
 class Square:
     """
     defines a square
