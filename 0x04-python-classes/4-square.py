@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+"""
+Defines a square by:
+Private instance attribute: size:
+property def size(self): to retrieve it
+property setter def size(self, value): to set it:
+if size is equal to 0, print an empty line
+"""
+
 class Square:
-    """
-    Defines a square by:
-    Private instance attribute: size:
-    property def size(self): to retrieve it
-    property setter def size(self, value): to set it:
-    if size is equal to 0, print an empty line
-    """
     def __init__(self, size=0):
         """
         Initialize square with size
