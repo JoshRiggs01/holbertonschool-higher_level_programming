@@ -2,18 +2,19 @@
 """
 Defines a square by its size.
 """
+
+
 class Square:
     """
     defines a square
     """
-
     def __init__(self, size=0):
         """
         Initializes the square with an optional size.
         """
         self.size = size
 
-        @property
+    @property
     def size(self):
         """
         Gets the current size of the square.
