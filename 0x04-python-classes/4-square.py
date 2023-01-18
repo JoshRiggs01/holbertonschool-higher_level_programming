@@ -9,6 +9,9 @@ if size is equal to 0, print an empty line
 
 
 class Square:
+    """
+    defines a square
+    """
     def __init__(self, size=0):
         """
         Initialize square with size
