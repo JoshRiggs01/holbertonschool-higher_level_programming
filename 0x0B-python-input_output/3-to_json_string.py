@@ -13,4 +13,4 @@ import json
 
 def to_json_string(my_obj):
     """ json representantion of object """
-    return json.dumps(my_obj)candon
+    return json.dumps(my_obj)
