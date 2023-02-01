@@ -13,22 +13,21 @@
 """
 
 
-import json
 import sys
-load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
-save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
+import os.path
+from typing import List
 
-arg = sys.argv[1:]
-file_name = "add_item.json"
+def load_from_json_file(filename: str) -> List:
+    import json
+    if os.path.isfile(filename):
+        with open(filename, mode='r', encoding='utf-8') as f:
+            return json.load(f)
+    return []
 
-try:
-    python_object = load_from_json_file(file_name)
-except FileNotFoundError:
-    save_to_json_file([], file_name)
+def save_to_json_file(my_obj: List, filename: str):
+    import json
+    with open(filename, mode='w', encoding='utf-8') as f:
+        json.dump(my_obj, f)
 
-python_object = load_from_json_file(file_name)
-if type(python_object) is list:
-    for item in arg:
-        python_object.append(item)
-
-save_to_json_file(python_object, file_name)
+if __name__ == '__main__':
+    save_to_json_file(load_from_json_file("add_item.json") + sys.argv[1:], "add_item.json")
