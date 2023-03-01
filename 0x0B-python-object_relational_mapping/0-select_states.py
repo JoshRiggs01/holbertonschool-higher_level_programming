@@ -1,26 +1,29 @@
 #!/usr/bin/python3
 """
-Lists all states from the database hbtn_0e_0_usa sorted in ascending order by id
+Module list state
 """
-
-import MySQLdb
 import sys
+import MySQLdb
+
+
+def main():
+    conn = MySQLdb.connect(
+                        host="localhost",
+                        port=3306,
+                        user=sys.argv[1],
+                        passwd=sys.argv[2],
+                        db=sys.argv[3],
+                        charset="utf8"
+                            )
+    cur = conn.cursor()
+    query = "SELECT id,name FROM states ORDER by id ASC"
+    cur.execute(query)
+    row = cur.fetchall()
+    for r in row:
+        print(r)
+    cur.close()
+    conn.close()
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 4:
-        username, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
-        db = MySQLdb.connect(
-            host="localhost",
-            user=username,
-            passwd=password,
-            db=db_name,
-            port=3306
-        )
-        cursor = db.cursor()
-        cursor.execute("SELECT * FROM states ORDER BY id ASC")
-        rows = cursor.fetchall()
-        for row in rows:
-            print(row)
-        cursor.close()
-        db.close()
+    main()
