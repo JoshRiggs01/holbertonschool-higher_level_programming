@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print("{}{}{}".format(str[53:70], str[-7:-1], str[11:28]))
+print("".join(__import__('sys').stdin.read().splitlines()[1:-1])[26:55])
