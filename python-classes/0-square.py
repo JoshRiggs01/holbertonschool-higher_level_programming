@@ -6,6 +6,9 @@ Instantiation with size (no type/value verification)
 
 
 class Square:
-        """ Initialize class with size """
-        def __init__(self, size):
-                self.__size = size
+
+    pass
+
+
+p = Square()
+print(p)
