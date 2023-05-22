@@ -1,0 +1,27 @@
+CLASS -  creates a new TYPE where OBJECTS are INSTANCES of the CLASS.
+Vars are referred to as FIELDS.
+FIELDS and METHODS can be referred to as ATTRIBUTES of the class.
+
+Fields are of two types - they can belong to each instance/object of the class or they can
+belong to the class itself.
+They are called "instance variables" and "class variables" respectively.
+
+---------------------SELF-------------
+Class methods hace only one specific difference form ordingary fuctinos- they must hace an
+extrda first name that has to be added th the beginning of the PARAMETER when you call the
+METHOD , Python will provide it. this particular var refers to teh OBJECT ITSELF
+and by convention it is given the name SELF-n
+
+Note for C++/Java/C# Programmers
+
+The self in Python is equivalent to the this pointer in C++ and the this reference in Java and C#.
+
+even a method without args stil has one - SELF.
+
+
+***************The __init__ method*******************
+
+the __init__ method is run as soon as an object of a class is instantiated(created-instance)
+
+the method is useful to do and initalization or passing inital values to your object you want to do with your objedct.
+
