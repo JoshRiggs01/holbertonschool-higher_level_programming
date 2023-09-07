@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print("".join(__import__('sys').stdin.read().splitlines()[1:-1])[26:55])
+str = "Python is an interpreted, interactive, object-oriented programming\
+ language that combines remarkable power with very clear syntax"
+print(str.split("object-oriented programming")[1].split("with Python")[0] + "with Python\n")
